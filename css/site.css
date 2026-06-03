@@ -134,13 +134,6 @@ h1
     margin-bottom: 24px;
 }
 
-.journey-total
-{
-    font-weight: 700;
-    color: #1a1a1a;
-    font-variant-numeric: tabular-nums;
-}
-
 .journey-list
 {
     list-style: none;
@@ -161,7 +154,7 @@ h1
 .journey-row > details > summary
 {
     display: grid;
-    grid-template-columns: 96px 22px 70px 1fr 14px;
+    grid-template-columns: 96px 22px 1fr 14px;
     gap: 12px;
     align-items: center;
     padding: 12px 4px;
@@ -197,7 +190,7 @@ h1
 
 .journey-row.journey-done .journey-icon
 {
-    color: #2a9d4a;
+    color: #999;
 }
 
 .journey-row.journey-skipped .journey-icon
@@ -208,19 +201,6 @@ h1
 .journey-row.journey-wip .journey-icon
 {
     color: #c98a00;
-}
-
-.journey-downloads
-{
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: 0.72rem;
-    color: #555;
-    background: #f0f0f0;
-    border-radius: 999px;
-    padding: 3px 8px;
-    text-align: center;
-    white-space: nowrap;
-    font-variant-numeric: tabular-nums;
 }
 
 .journey-title
@@ -266,6 +246,38 @@ h1
     color: #888;
     text-decoration: line-through;
     text-decoration-color: #ccc;
+}
+
+/* Inline divider for a milestone hit (sits between journey rows) */
+
+.journey-divider
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 14px 0;
+    padding: 6px 4px;
+    border-bottom: none;
+}
+
+.journey-divider::before,
+.journey-divider::after
+{
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #ff6a1f, transparent);
+}
+
+.journey-divider-label
+{
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #d33a00;
+    white-space: nowrap;
 }
 
 /* Milestones */
@@ -331,6 +343,32 @@ h1
     font-size: 1rem;
     color: #6b4a00;
     font-weight: 800;
+}
+
+.journey-milestone-list .milestone-future
+{
+    color: #999;
+}
+
+.journey-milestone-list .milestone-future svg
+{
+    color: #bbb;
+}
+
+.journey-milestone-list .milestone-current
+{
+    color: #d33a00;
+    font-weight: 800;
+    background: #fff;
+    border: 2px solid #ff6a1f;
+    border-radius: 999px;
+    padding: 4px 12px;
+    box-shadow: 0 0 0 3px rgba(255, 106, 31, 0.18);
+}
+
+.journey-milestone-list .milestone-current svg
+{
+    color: #ff6a1f;
 }
 
 /* Open Source */
@@ -467,6 +505,8 @@ h1
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 600;
+    display: block;
+    margin-top: 6px;
 }
 
 .product-card a:hover
@@ -543,7 +583,7 @@ footer nav a
 
     .journey-row > details > summary
     {
-        grid-template-columns: 70px 18px 60px 1fr;
+        grid-template-columns: 70px 18px 1fr;
         gap: 8px;
         padding: 10px 2px;
     }
@@ -568,12 +608,6 @@ footer nav a
         font-size: 0.85rem;
     }
 
-    .journey-downloads
-    {
-        font-size: 0.68rem;
-        padding: 2px 6px;
-    }
-
     .journey-milestone
     {
         padding: 18px 14px;
@@ -594,7 +628,7 @@ footer nav a
 {
     .journey-row > details > summary
     {
-        grid-template-columns: 56px 16px 50px 1fr;
+        grid-template-columns: 56px 16px 1fr;
         gap: 6px;
     }
 
