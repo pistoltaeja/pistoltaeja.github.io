@@ -1,0 +1,605 @@
+*, *::before, *::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #000;
+    color: #e0e0e0;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+a
+{
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+/* Hero */
+
+.hero-banner
+{
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 90%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 90%);
+}
+
+.hero-banner img
+{
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: blur(1px);
+}
+
+.hero
+{
+    text-align: center;
+    padding: 0 24px 5px;
+    margin-top: -80px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image
+{
+    max-width: 300px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+}
+
+h1
+{
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.subtitle
+{
+    font-size: 1.1rem;
+    color: #999;
+    margin-bottom: 0;
+}
+
+/* Content card */
+
+.content-wrap
+{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+    background: #fff;
+    color: #1a1a1a;
+    border-radius: 10px 10px 0 0;
+}
+
+.bio-section
+{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 24px;
+}
+
+.bio-section p
+{
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.bio-section h2
+{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+/* Journey */
+
+.journey
+{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 20px 24px 40px;
+}
+
+.journey h2
+{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.journey-tracker
+{
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 24px;
+}
+
+.journey-total
+{
+    font-weight: 700;
+    color: #1a1a1a;
+    font-variant-numeric: tabular-nums;
+}
+
+.journey-list
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.journey-row
+{
+    border-bottom: 1px solid #eee;
+}
+
+.journey-row > details
+{
+    width: 100%;
+}
+
+.journey-row > details > summary
+{
+    display: grid;
+    grid-template-columns: 96px 22px 70px 1fr 14px;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 4px;
+    cursor: pointer;
+    list-style: none;
+    transition: background 0.15s ease;
+}
+
+.journey-row > details > summary::-webkit-details-marker
+{
+    display: none;
+}
+
+.journey-row > details > summary:hover
+{
+    background: #fafafa;
+}
+
+.journey-date
+{
+    font-size: 0.8rem;
+    color: #666;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.journey-icon
+{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.journey-row.journey-done .journey-icon
+{
+    color: #2a9d4a;
+}
+
+.journey-row.journey-skipped .journey-icon
+{
+    color: #999;
+}
+
+.journey-row.journey-wip .journey-icon
+{
+    color: #c98a00;
+}
+
+.journey-downloads
+{
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.72rem;
+    color: #555;
+    background: #f0f0f0;
+    border-radius: 999px;
+    padding: 3px 8px;
+    text-align: center;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.journey-title
+{
+    font-size: 0.92rem;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+.journey-chev
+{
+    color: #bbb;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+    text-align: right;
+}
+
+.journey-row > details[open] .journey-chev
+{
+    transform: rotate(90deg);
+}
+
+.journey-detail
+{
+    padding: 4px 4px 16px 108px;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.journey-detail p
+{
+    margin-bottom: 8px;
+}
+
+.journey-detail a
+{
+    color: #0066cc;
+    word-break: break-all;
+}
+
+.journey-row.journey-skipped .journey-title
+{
+    color: #888;
+    text-decoration: line-through;
+    text-decoration-color: #ccc;
+}
+
+/* Milestones */
+
+.journey-milestone
+{
+    list-style: none;
+    margin: 24px 0;
+    padding: 22px 24px;
+    border-top: 3px double #c98a00;
+    border-bottom: 3px double #c98a00;
+    text-align: center;
+    background: linear-gradient(to right, #fff8e0, #fff, #fff8e0);
+}
+
+.journey-milestone h3
+{
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #8a5a00;
+    margin-bottom: 14px;
+}
+
+.journey-milestone-list
+{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 0;
+}
+
+.journey-milestone-list li
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: #6b4a00;
+}
+
+.journey-milestone-list svg
+{
+    width: 18px;
+    height: 18px;
+    color: #c98a00;
+}
+
+.journey-milestone-list .milestone-100k svg
+{
+    color: #b8860b;
+    width: 22px;
+    height: 22px;
+}
+
+.journey-milestone-list .milestone-100k
+{
+    font-size: 1rem;
+    color: #6b4a00;
+    font-weight: 800;
+}
+
+/* Open Source */
+
+.open-source
+{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 24px 40px;
+}
+
+.open-source h2
+{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.open-source-intro
+{
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.open-source-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.open-source-card
+{
+    background: #f6f5f0;
+    border: 1px solid #e6e3d8;
+    border-radius: 10px;
+    padding: 20px 22px;
+}
+
+.open-source-card h3
+{
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.open-source-card h3 svg
+{
+    width: 18px;
+    height: 18px;
+    color: #1a1a1a;
+}
+
+.open-source-card p
+{
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.open-source-link
+{
+    font-size: 0.82rem;
+    color: #0066cc;
+    word-break: break-all;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.licence-pending
+{
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8a5a00;
+    background: #fff3c4;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-style: normal;
+}
+
+/* Tagline + Products */
+
+.tagline
+{
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    padding: 16px 24px 0;
+    font-weight: 500;
+}
+
+.products-grid
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 24px 60px;
+}
+
+.product-card
+{
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+}
+
+.product-card h3
+{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.product-card p
+{
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.product-card a
+{
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.product-card a:hover
+{
+    text-decoration: underline;
+}
+
+/* Footer */
+
+footer
+{
+    text-align: center;
+    padding: 32px 24px;
+    font-size: 0.85rem;
+    color: #999;
+    background: #fff;
+}
+
+footer a,
+footer a:visited
+{
+    color: #999;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover
+{
+    color: #666;
+    text-decoration: underline;
+}
+
+footer nav
+{
+    margin-top: 8px;
+}
+
+footer nav a
+{
+    margin: 0 8px;
+}
+
+/* Responsive */
+
+@media (max-width: 760px)
+{
+    .open-source-grid
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px)
+{
+    h1
+    {
+        font-size: 2rem;
+    }
+
+    .hero-banner img
+    {
+        height: 320px;
+    }
+
+    .hero-image
+    {
+        max-width: 220px;
+    }
+
+    .products-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-row > details > summary
+    {
+        grid-template-columns: 70px 18px 60px 1fr;
+        gap: 8px;
+        padding: 10px 2px;
+    }
+
+    .journey-chev
+    {
+        display: none;
+    }
+
+    .journey-detail
+    {
+        padding: 4px 0 14px 0;
+    }
+
+    .journey-date
+    {
+        font-size: 0.72rem;
+    }
+
+    .journey-title
+    {
+        font-size: 0.85rem;
+    }
+
+    .journey-downloads
+    {
+        font-size: 0.68rem;
+        padding: 2px 6px;
+    }
+
+    .journey-milestone
+    {
+        padding: 18px 14px;
+    }
+
+    .journey-milestone-list
+    {
+        gap: 10px;
+    }
+
+    .journey-milestone-list li
+    {
+        font-size: 0.78rem;
+    }
+}
+
+@media (max-width: 360px)
+{
+    .journey-row > details > summary
+    {
+        grid-template-columns: 56px 16px 50px 1fr;
+        gap: 6px;
+    }
+
+    .journey-title
+    {
+        font-size: 0.8rem;
+    }
+}
