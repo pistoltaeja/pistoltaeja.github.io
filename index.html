@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests">
     <meta http-equiv="content-language" content="en">
     <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="preload" href="/img/pforpistol-hero.png" as="image">
+    <link rel="preload" href="/img/pforpistol-hero.webp" as="image" fetchpriority="high" type="image/webp">
     <link rel="stylesheet" href="/css/site.css">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Pistol Taeja">
@@ -67,12 +67,13 @@
     </script>
 </head>
 <body>
+    <main>
     <section class="hero-banner">
-        <img src="/img/pforpistol-hero.png" alt="P For Pistol &mdash; indie game level mockup by Pistol Taeja, writer, artist and game developer">
+        <img src="/img/pforpistol-hero.webp" alt="P For Pistol &mdash; indie game level mockup by Pistol Taeja, writer, artist and game developer" width="1920" height="680" fetchpriority="high" decoding="async">
     </section>
 
     <section class="hero">
-        <img src="/img/pistol-taeja-profile.png" alt="Pistol Taeja &mdash; indie writer, artist and game developer profile" class="hero-image">
+        <img src="/img/pistol-taeja-profile.webp" alt="Pistol Taeja &mdash; indie writer, artist and game developer profile" class="hero-image" width="512" height="512" decoding="async">
         <h1>Pistol Taeja</h1>
         <p class="subtitle">Indie writer, artist and game developer</p>
     </section>
@@ -597,7 +598,7 @@
                 <article class="open-source-card">
                     <h3><svg aria-hidden="true"><use href="/img/icons.svg#icon-github"></use></svg> Fountain-Plus</h3>
                     <p>Fountain-Plus is the open spec and reference parser for an extended Fountain syntax. It adds pages, panels, tags, and storyboard metadata on top of vanilla Fountain &mdash; every valid Fountain file is still a valid Fountain-Plus file. The repo ships the parser, formatter, and writers for PDF, Final Draft, FadeIn, and Fountain.</p>
-                    <a class="open-source-link" href="https://github.com/pistoltaeja/Fountain-Plus" target="_blank" rel="noopener" title="Fountain-Plus parser repo on GitHub" aria-label="Open the Fountain-Plus parser repository on GitHub">github.com/pistoltaeja/Fountain-Plus</a>
+                    <a class="open-source-link" href="https://github.com/pistoltaeja/Fountain-Plus" target="_blank" rel="noopener" title="Fountain-Plus parser repo on GitHub" aria-label="github.com/pistoltaeja/Fountain-Plus &mdash; open the Fountain-Plus parser repo on GitHub">github.com/pistoltaeja/Fountain-Plus</a>
                     <br>
                     <span class="licence-pending">MIT</span>
                 </article>
@@ -605,7 +606,7 @@
                 <article class="open-source-card">
                     <h3><svg aria-hidden="true"><use href="/img/icons.svg#icon-github"></use></svg> Mangaplay</h3>
                     <p>The <code>.mangaplay</code> format and its formatter &mdash; a Fountain-Plus superset built for manga, comics, and webtoons. Pages, panels, panel tags, and reading direction baked in. The repo holds the syntax reference and the formatter that powers Mangaplay Studio.</p>
-                    <a class="open-source-link" href="https://github.com/pistoltaeja/mangaplay" target="_blank" rel="noopener" title="Mangaplay format repo on GitHub" aria-label="Open the Mangaplay format repository on GitHub">github.com/pistoltaeja/mangaplay</a>
+                    <a class="open-source-link" href="https://github.com/pistoltaeja/mangaplay" target="_blank" rel="noopener" title="Mangaplay format repo on GitHub" aria-label="github.com/pistoltaeja/mangaplay &mdash; open the Mangaplay format repo on GitHub">github.com/pistoltaeja/mangaplay</a>
                     <br>
                     <span class="licence-pending">MIT</span>
                 </article>
@@ -625,16 +626,17 @@
                 <h3>Fountain+</h3>
                 <p>Google Docs Extensions for exporting screenplays, pre-coverage checks and other utilities in the Fountain format or traditional screenplay.</p>
                 <a href="https://fountain.plus/screenplay-converter?utm_source=pistoltaeja&amp;utm_medium=referral&amp;utm_campaign=brand-hub&amp;utm_content=fountain-plus-card" target="_blank" rel="noopener" title="Fountain+ web app &mdash; screenplay converter" aria-label="Open the Fountain+ web app screenplay converter">Web App</a>
-                <a href="https://workspace.google.com/marketplace/app/fountain+_exporter/189600936550?utm_source=pistoltaeja&amp;utm_medium=referral&amp;utm_campaign=brand-hub&amp;utm_content=fountain-plus-card-exporter" target="_blank" rel="noopener" title="Fountain+ Exporter on Google Workspace Marketplace" aria-label="Install Fountain+ Exporter from the Google Workspace Marketplace">Fountain+ Exporter For Google Docs</a>
+                <a href="https://workspace.google.com/marketplace/app/fountain+_exporter/189600936550?utm_source=pistoltaeja&amp;utm_medium=referral&amp;utm_campaign=brand-hub&amp;utm_content=fountain-plus-card-exporter" target="_blank" rel="noopener" title="Fountain+ Exporter on Google Workspace Marketplace" aria-label="Fountain+ Exporter For Google Docs &mdash; install from the Google Workspace Marketplace">Fountain+ Exporter For Google Docs</a>
             </div>
             <div class="product-card">
                 <h3>Absolutely Skint</h3>
                 <p>The dumping ground for random thoughts by Pistol Taeja.</p>
-                <a href="https://www.absolutelyskint.com?utm_source=pistoltaeja&amp;utm_medium=referral&amp;utm_campaign=brand-hub&amp;utm_content=absolutely-skint-card" target="_blank" rel="noopener" title="Absolutely Skint guides and articles" aria-label="Visit the Absolutely Skint website">Visit absolutelyskint.com</a>
+                <a href="https://www.absolutelyskint.com?utm_source=pistoltaeja&amp;utm_medium=referral&amp;utm_campaign=brand-hub&amp;utm_content=absolutely-skint-card" target="_blank" rel="noopener" title="Absolutely Skint guides and articles" aria-label="Visit absolutelyskint.com &mdash; Absolutely Skint guides and articles">Visit absolutelyskint.com</a>
             </div>
         </section>
 
     </div>
+    </main>
 
     <footer>
         &copy; 2026 Pistol Taeja. All rights reserved.
