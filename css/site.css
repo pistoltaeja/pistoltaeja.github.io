@@ -219,6 +219,11 @@ h1
     color: #999;
 }
 
+.journey-row.journey-row-recent .journey-icon
+{
+    color: #2a9d4a;
+}
+
 .journey-row.journey-skipped .journey-icon
 {
     color: #999;
@@ -355,20 +360,6 @@ h1
     width: 18px;
     height: 18px;
     color: #c98a00;
-}
-
-.journey-milestone-list .milestone-100k svg
-{
-    color: #b8860b;
-    width: 22px;
-    height: 22px;
-}
-
-.journey-milestone-list .milestone-100k
-{
-    font-size: 1rem;
-    color: #6b4a00;
-    font-weight: 800;
 }
 
 .journey-milestone-list .milestone-future
