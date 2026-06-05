@@ -309,6 +309,20 @@ h1
     text-transform: uppercase;
     color: #d33a00;
     white-space: nowrap;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.journey-divider-date
+{
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #d33a00;
+    opacity: 0.75;
+    margin-top: 2px;
 }
 
 /* Milestones */
